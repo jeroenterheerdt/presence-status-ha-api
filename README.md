@@ -16,7 +16,7 @@ If you are looking to just turn an Home Assistant entity off or on, please see [
       - Must be a sensor or this application will fail.
     - HA_FRIENDLY_NAME: The friendly name you want to use for your sensor in Home Assistant.
     - HA_TOKEN: The long-lived access token you generated earlier
-3. Run the Docker container with the command `docker run -d --restart=unless-stopped -e "HA_IP=<your-ip>" -e "HA_PORT=<your-port>" -e "HA_ENTITY=sensor.<name>" -e "HA_FRIENDLY_NAME=<your_friendly_name" -e "HA_TOKEN=<your-token>" --name=presence-status-ha-api jeroenterheerdt/presence-status-ha-api`
+3. Run the Docker container with the command `docker run -d --restart=unless-stopped -e "HA_IP=<your-ip>" -e "HA_PORT=<your-port>" -e "HA_ENTITY=sensor.<name>" -e "HA_FRIENDLY_NAME=<your_friendly_name>" -e "HA_TOKEN=<your-token>" --name=presence-status-ha-api jeroenterheerdt/presence-status-ha-api`
 4. Set the Custom API values in Presence Light. You should replace the IP and port seen below with the IP and port of this Docker container (not your Home Assistant installation). All calls in this application use POST.
 ![Example Custom API Config](example-custom-api-config.png)
 
