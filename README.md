@@ -13,7 +13,7 @@ If you are looking to just turn an Home Assistant entity off or on, please see [
     - HA_IP: The IP Address or FQDN of your Home Assistant installation that the Docker container will be able to access
     - HA_PORT: The port that your Home Assistant installation runs on (Normally, this is `8123`)
     - HA_ENTITY: The entity name of the sensor you want to use in the `sensor..<name>` format. (I use `sensor_teams` in mine.)
-        - Note: This light must support RGB, or this application will fail
+      - Must be a sensor or this application will fail.
     - HA_FRIENDLY_NAME: The friendly name you want to use for your sensor in Home Assistant.
     - HA_TOKEN: The long-lived access token you generated earlier
 3. Run the Docker container with the command `docker run -d --restart=unless-stopped -e "HA_IP=<your-ip>" -e "HA_PORT=<your-port>" -e "HA_ENTITY=sensor.<name>" -e "HA_FRIENDLY_NAME=<your_friendly_name" -e "HA_TOKEN=<your-token>" --name=presence-status-ha-api jeroenterheerdt/presence-status-ha-api`
